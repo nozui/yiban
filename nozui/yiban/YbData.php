@@ -24,9 +24,9 @@ class YbData
         }
 
 //以下三个变量内容需换成本应用的
-        $APPID = "3f2e24ef0465ed5c";   //在open.yiban.cn管理中心的AppID
-        $APPSECRET = "9ef310d3ca3570b2f6ece02c5e8c40e2"; //在open.yiban.cn管理中心的AppSecret
-        $CALLBACK = "http://f.yiban.cn/iapp129695";  //在open.yiban.cn管理中心的oauth2.0回调地址
+        $APPID = "";   //在open.yiban.cn管理中心的AppID
+        $APPSECRET = ""; //在open.yiban.cn管理中心的AppSecret
+        $CALLBACK = "";  //在open.yiban.cn管理中心的oauth2.0回调地址
 
         if(isset($_GET["code"])){   //用户授权后跳转回来会带上code参数，此处code非access_token，需调用接口转化。
             $getTokenApiUrl = "https://oauth.yiban.cn/token/info?code=".$_GET['code']."&client_id={$APPID}&client_secret={$APPSECRET}&redirect_uri={$CALLBACK}";
